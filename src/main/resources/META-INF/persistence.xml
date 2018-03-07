@@ -8,6 +8,8 @@
         <class>com.chriscorp.epay.model.PaymentData</class>
         <class>com.chriscorp.epay.model.Client</class>
         <class>com.chriscorp.epay.model.Buyer</class>
+        <class>com.chriscorp.epay.model.CreditCard</class>
+        <class>com.chriscorp.epay.model.Boleto</class>
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 
 	</persistence-unit>

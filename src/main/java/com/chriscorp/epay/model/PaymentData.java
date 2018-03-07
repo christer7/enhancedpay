@@ -1,6 +1,7 @@
 package com.chriscorp.epay.model;
 
 import javax.persistence.*;
+import javax.persistence.CascadeType;
 
 @Entity
 public class PaymentData {
@@ -9,25 +10,26 @@ public class PaymentData {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.ALL})
     @JoinColumn
     private Client client;
 
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.ALL})
     @JoinColumn
     private Buyer buyer;
 
+    private PaymentType paymentType;
+
+    @OneToOne(cascade = {CascadeType.ALL})
+    @JoinColumn
+    private CreditCard creditCard;
+
+    @OneToOne(cascade = {CascadeType.ALL})
+    @JoinColumn
+    private Boleto boleto;
+
     public Long getId() {
         return id;
-    }
-
-    @Override
-    public String toString() {
-        return "PaymentData{" +
-                "id=" + id +
-                ", client=" + client +
-                ", buyer=" + buyer +
-                '}';
     }
 
     public Client getClient() {
@@ -46,4 +48,27 @@ public class PaymentData {
         this.buyer = buyer;
     }
 
+    public PaymentType getPaymentType() {
+        return paymentType;
+    }
+
+    public void setPaymentType(PaymentType paymentType) {
+        this.paymentType = paymentType;
+    }
+
+    public CreditCard getCreditCard() {
+        return creditCard;
+    }
+
+    public void setCreditCard(CreditCard creditCard) {
+        this.creditCard = creditCard;
+    }
+
+    public Boleto getBoleto() {
+        return boleto;
+    }
+
+    public void setBoleto(Boleto boleto) {
+        this.boleto = boleto;
+    }
 }

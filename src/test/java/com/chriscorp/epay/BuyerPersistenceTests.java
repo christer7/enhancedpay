@@ -44,7 +44,7 @@ public class BuyerPersistenceTests {
         Buyer otherBuyer = buyerJpaRepository.findOne(b1.getId());
         assertEquals("Johan Svensson", otherBuyer.getName());
 
-        //buyerJpaRepository.delete(otherBuyer);
+        buyerJpaRepository.delete(otherBuyer);
 
     }
 

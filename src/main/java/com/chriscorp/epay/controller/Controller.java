@@ -45,27 +45,7 @@ public class Controller implements Initializable {
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-
-/*        paymentTypeRB.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
-            @Override
-            public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
-                if (paymentTypeRB.getSelectedToggle() != null) {
-                    if (paymentTypeRB.getSelectedToggle().getUserData() == creditCardRadioButton.getUserData()) {
-                        System.out.println("Choosed: " + creditCardRadioButton.getText());
-                    } else {
-                        System.out.println("Choosed: " + boletoRadioButton.getText());
-                    }
-                } else {
-                    System.out.println("Not geeting any selected");
-                }
-
-
-            }
-        });*/
-
-
-        }
+    public void initialize(URL url, ResourceBundle rb) { }
 
 
 
